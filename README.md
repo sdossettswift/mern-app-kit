@@ -2,11 +2,13 @@
 
 Ground zero for your next MERN app.
 
-  - Sass is transpiled, autoprefixed, and minified
-  - ES6 and JSX are transpiled and uglified
-  - Production files are updated on save and the browser will refresh automagically
-  - All required/imported modules are concatenated and minified into a single file
-  - Ran on an Express server that is deployable to Heroku
+## Webpack
+
+  - Autoprefixer
+  - Babel
+  - UglifyJS
+  - Webpack Dev Middleware
+  - Hot Module Replacement
 
 ## Prerequisites
 
@@ -17,21 +19,22 @@ Ground zero for your next MERN app.
 ## Getting started
 
   - clone the repo
-  - `npm run init-dev`
+  - `npm install`
+  - update `dbLocation` path in `./db/config.js`
   - reference **Workflow**
 
 ## Available commands
 
-  - `npm run build` compile all src to dist
-  - `npm run dev` start server, watch files, and auto refresh
   - `mongod` run database
-  - `npm run prod` wipe out dist, recompile all src to dist, and uglify JavaScript
+  - `npm run build:dev` compile all src to dist
+  - `npm run build:prod` wipe out dist, recompile all src to dist with performance optimizations
+  - `npm run dev` start server, watch files, and auto refresh
   - `npm run clean` wipe out dist entirely
 
 ## Workflow
 
   - simultaneously run `mongod` & `npm run dev` to run database, start server, watch files, and auto refresh
-  - Live [http://localhost:3000](http://localhost:3000)
+  - Live [http://localhost:8080](http://localhost:8080)
 
 ## Publishing
 
@@ -50,11 +53,6 @@ With Heroku command line tools installed, simply run:
 ## Sass organization
 
   The Sass is organized following [SMACSS](https://smacss.com) (Scalable & Modular Architecture for CSS) conventions.
-
-## Credits
-
-  - [magentanova](https://github.com/magentanova) Server + DB setup
-  - [t3patterson](http://github.com/t3patterson) Server + DB setup
 
 ## Misc:
 
