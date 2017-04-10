@@ -1,5 +1,6 @@
 const express = require('express')
 const portNumber = require('port-number')
+const history = require('connect-history-api-fallback')
 const webpack = require('webpack')
 const devConfig = require('./webpack/dev.js')
 const webpackDevMiddleware = require('webpack-dev-middleware')
@@ -11,6 +12,8 @@ const isDev = process.env.NODE_ENV === 'development'
 const port = process.env.PORT ? process.env.PORT : portNumber()
 
 const app = express()
+
+app.use(history())
 
 connectToDB()
 
